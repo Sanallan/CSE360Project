@@ -30,7 +30,7 @@ public class LoginPageController {
         if (txtUser.getText().equals("developer") && txtPass.getText().equals("dev1") 
         || txtUser.getText().equals("supervisor") && txtPass.getText().equals("sup2") 
         || txtUser.getText().equals("engineer") && txtPass.getText().equals("engi3")) {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("test.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("docPage.fxml"));
             Parent root = loader.load();
             
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
