@@ -42,14 +42,14 @@ public class PatientMenu {
 	
 	//When this method is called, it will changed to the scene to patient history page
 	@FXML
-	public void switchToHistory(ActionEvent event) throws IOException 
+	public void switchToMessage(ActionEvent event) throws IOException 
 	{
-		Parent patientHistoryParent = FXMLLoader.load(getClass().getResource("PatientHistory.fxml"));
-		Scene patientHistoryScene = new Scene(patientHistoryParent);
+		Parent messageParent = FXMLLoader.load(getClass().getResource("PatientHistory.fxml"));
+		Scene messageScene = new Scene(messageParent);
 					
 		//This line gets the stage information
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-		window.setScene(patientHistoryScene);
+		window.setScene(messageScene);
 		window.show();
 	}
 	
@@ -57,12 +57,12 @@ public class PatientMenu {
 	@FXML
 	public void switchToContactInfo(ActionEvent event) throws IOException 
 	{
-		Parent vitalsParent = FXMLLoader.load(getClass().getResource("Vitals.fxml"));
-		Scene vitalsScene = new Scene(vitalsParent);
+		Parent contactInfoParent = FXMLLoader.load(getClass().getResource("Vitals.fxml"));
+		Scene contactInfoScene = new Scene(contactInfoParent);
 						
 		//This line gets the stage information
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-		window.setScene(vitalsScene);
+		window.setScene(contactInfoScene);
 		window.show();
 	}
 
