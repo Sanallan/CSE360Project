@@ -18,7 +18,7 @@ public class PatientMenu {
 	@FXML
 	public void switchToMedHist(ActionEvent event) throws IOException 
 	{
-		Parent patientSearchParent = FXMLLoader.load(getClass().getResource("MedicalHistory(PatientSide).fxml"));
+		Parent patientSearchParent = FXMLLoader.load(getClass().getResource("MedicalHistoryPatientSide.fxml"));
 		Scene patientSearchScene = new Scene(patientSearchParent);
 		
 		//This line gets the stage information
@@ -31,7 +31,7 @@ public class PatientMenu {
 	@FXML
 	public void switchToSummary(ActionEvent event) throws IOException 
 	{
-		Parent appointmentSummaryParent = FXMLLoader.load(getClass().getResource("AppointmentSummary(PatienSide).fxml"));
+		Parent appointmentSummaryParent = FXMLLoader.load(getClass().getResource("AppointmentSummaryPatienSide.fxml"));
 		Scene appointmentSummaryScene = new Scene(appointmentSummaryParent);
 				
 		//This line gets the stage information
