@@ -44,7 +44,7 @@ public class PatientMenu {
 	@FXML
 	public void switchToMessage(ActionEvent event) throws IOException 
 	{
-		Parent messageParent = FXMLLoader.load(getClass().getResource("PatientHistory.fxml"));
+		Parent messageParent = FXMLLoader.load(getClass().getResource("patientmessaging.fxml"));
 		Scene messageScene = new Scene(messageParent);
 					
 		//This line gets the stage information
@@ -57,7 +57,7 @@ public class PatientMenu {
 	@FXML
 	public void switchToContactInfo(ActionEvent event) throws IOException 
 	{
-		Parent contactInfoParent = FXMLLoader.load(getClass().getResource("Vitals.fxml"));
+		Parent contactInfoParent = FXMLLoader.load(getClass().getResource("patientInfo.fxml"));
 		Scene contactInfoScene = new Scene(contactInfoParent);
 						
 		//This line gets the stage information
