@@ -2,13 +2,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PatientManager {
-    private List<Patient> patients = new ArrayList<>();
+    private List<PatientHistoryController> patients = new ArrayList<>();
 
-    public void addPatient(Patient patient) {
+    public void addPatient(PatientHistoryController patient) {
         patients.add(patient);
     }
 
-    public List<Patient> getAllPatients() {
+    public List<PatientHistoryController> getAllPatients() {
         return patients;
     }
 }
