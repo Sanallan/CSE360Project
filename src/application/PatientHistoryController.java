@@ -30,10 +30,10 @@ public class PatientHistoryController {
 	}
 
     @FXML
-    private Text ImunizatinMissing;
+    private Text ImmunizationMissing;
 
     @FXML
-    private Text allegies;
+    private Text allergies;
 
     @FXML
     private Button backToMenuButton;
