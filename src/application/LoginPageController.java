@@ -27,10 +27,24 @@ public class LoginPageController {
     @FXML
     void btnLogin(ActionEvent event) throws IOException{
         String username = txtUser.getText();
-        if (txtUser.getText().equals("developer") && txtPass.getText().equals("dev1") 
-        || txtUser.getText().equals("supervisor") && txtPass.getText().equals("sup2") 
-        || txtUser.getText().equals("engineer") && txtPass.getText().equals("engi3")) {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("NurseMenu.fxml"));
+        if (txtUser.getText().equals("doc") && txtPass.getText().equals("doc1")) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("docPage.fxml"));
+            Parent root = loader.load();
+            
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } else if (txtUser.getText().equals("nurse") && txtPass.getText().equals("pat2")){
+        	FXMLLoader loader = new FXMLLoader(getClass().getResource("NurseMenu.fxml"));
+            Parent root = loader.load();
+            
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } else if(txtUser.getText().equals("patient") && txtPass.getText().equals("pat3")){
+        	FXMLLoader loader = new FXMLLoader(getClass().getResource("patientDocScreen.fxml"));
             Parent root = loader.load();
             
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
