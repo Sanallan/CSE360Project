@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="639.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="-100.0" layoutY="-128.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Button layoutX="138.0" layoutY="170.0" mnemonicParsing="false" text="Back" />
+         </children>
+      </AnchorPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3679d0" height="410.0" layoutX="52.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="225.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="410.0" layoutX="321.0" layoutY="118.0" stroke="BLACK" strokeType="INSIDE" width="246.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9e2136" height="403.0" layoutX="641.0" layoutY="121.0" stroke="BLACK" strokeType="INSIDE" width="213.0" />
+      <Text layoutX="115.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insurance">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+      <Text layoutX="346.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Information">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="689.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pharmacy">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+      <TextField layoutX="66.0" layoutY="133.0" promptText="Name" />
+      <TextField layoutX="66.0" layoutY="179.0" promptText="Address" />
+      <TextField layoutX="66.0" layoutY="232.0" promptText="Hours" />
+      <TextField layoutX="66.0" layoutY="298.0" promptText="Phone #" />
+      <TextField layoutX="66.0" layoutY="362.0" promptText="Fax #" />
+      <TextField layoutX="66.0" layoutY="414.0" promptText="Email" />
+      <Button layoutX="787.0" layoutY="486.0" mnemonicParsing="false" text="Update" />
+      <TextField layoutX="355.0" layoutY="133.0" promptText="Phone #" />
+      <TextField layoutX="355.0" layoutY="179.0" promptText="Address" />
+      <TextField layoutX="355.0" layoutY="232.0" promptText="Email" />
+      <TextField layoutX="346.0" layoutY="414.0" promptText="Name" />
+      <TextField layoutX="346.0" layoutY="460.0" promptText="Address" />
+      <TextField layoutX="346.0" layoutY="498.0" promptText="Phone #" />
+      <Text layoutX="346.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Emergencey Contact:" />
+      <TextField layoutX="665.0" layoutY="146.0" promptText="Name" />
+      <TextField layoutX="665.0" layoutY="192.0" promptText="Address" />
+      <TextField layoutX="665.0" layoutY="245.0" promptText="Hours" />
+      <TextField layoutX="665.0" layoutY="307.0" promptText="Phone #" />
+      <TextField layoutX="665.0" layoutY="375.0" promptText="Fax #" />
+      <TextField layoutX="665.0" layoutY="427.0" promptText="Email" />
+      <Text layoutX="284.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Information">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Text>
+      <Button layoutX="215.0" layoutY="486.0" mnemonicParsing="false" text="Update" />
+      <Button layoutX="504.0" layoutY="498.0" mnemonicParsing="false" text="Update" />
+   </children>
+</AnchorPane>
