@@ -1,6 +1,6 @@
 package application;
 
-import java.awt.TextArea;
+
 import java.io.IOException;
 
 import javafx.event.ActionEvent;
@@ -17,19 +17,6 @@ import javafx.scene.Node;
 
 public class AppointSummPatient {
 	
-	//When this method is called, it will changed to the scene to menu page
-	@FXML
-	public void switchToMenu(ActionEvent event) throws IOException 
-	{
-		Parent PatientMenuParent = FXMLLoader.load(getClass().getResource("MenuSelectPatient.fxml"));
-		Scene PatientMenuScene = new Scene(PatientMenuParent);
-				
-		//This line gets the stage information
-		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-		window.setScene(PatientMenuScene);
-		window.show();
-	}
-
     @FXML
     private Text bodytemp;
 
@@ -37,13 +24,7 @@ public class AppointSummPatient {
     private Text heartrate;
 
     @FXML
-    private Button bloodpress;
-
-    @FXML
     private Text date;
-
-    @FXML
-    private TextArea respirrate;
 
     @FXML
     private Text height;
@@ -59,23 +40,18 @@ public class AppointSummPatient {
 
     @FXML
     private Text immunizations;
-
-    @FXML
-    private Button logOutButton;
-    
-    @FXML
-    private TextArea medicationprescr;
-    
-    @FXML
-    private TextArea reasonofvisit;
-    
-    @FXML
-    private TextArea listofprevappoints;
-
-    @FXML
-    void backToMenu(ActionEvent event) {
-
-    }
+	
+	@FXML
+	void back(ActionEvent event) throws IOException 
+	{
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("MenuSelectPatient.fxml"));
+        Parent root = loader.load();
+        
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+	}
 
     @FXML
     void earcheck(ActionEvent event) {
@@ -88,8 +64,14 @@ public class AppointSummPatient {
     }
 
     @FXML
-    void logOut(ActionEvent event) {
-
+    void logOut(ActionEvent event) throws IOException {
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource("LoginPage.fxml"));
+        Parent root = loader.load();
+        
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
 }
