@@ -15,69 +15,62 @@ import javafx.stage.Stage;
 import javafx.scene.Node;
 
 public class MedHistPatient {
-	
-	//When this method is called, it will changed to the scene to menu page
+	  @FXML
+	    private Text ImunizatinMissing;
+
+	    @FXML
+	    private Text allegies;
+
+	    @FXML
+	    private Button backToMenuButton;
+
+	    @FXML
+	    private Text dob;
+
+	    @FXML
+	    private TextArea familyHistoryArea;
+
+	    @FXML
+	    private Text height;
+
+	    @FXML
+	    private Text illiness;
+
+	    @FXML
+	    private CheckBox immunizationCheckBox;
+
+	    @FXML
+	    private Text immunizations;
+
+	    @FXML
+	    private Button logOutButton;
+
+	    @FXML
+	    private Text medications;
+
+	    @FXML
+	    private Text name;
+
+	    @FXML
+	    private TextArea pastCheckInArea;
+
+	    @FXML
+	    private TextArea surgeryArea;
+
+	    @FXML
+	    private Text weight;
+
 	@FXML
-	public void switchToMenu(ActionEvent event) throws IOException 
+	void back(ActionEvent event) throws IOException 
 	{
-		Parent PatientMenuParent = FXMLLoader.load(getClass().getResource("MenuSelectPatient.fxml"));
-		Scene PatientMenuScene = new Scene(PatientMenuParent);
-				
-		//This line gets the stage information
-		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-		window.setScene(PatientMenuScene);
-		window.show();
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("MenuSelectPatient.fxml"));
+        Parent root = loader.load();
+        
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 	}
-
-    @FXML
-    private Text ImunizatinMissing;
-
-    @FXML
-    private Text allegies;
-
-    @FXML
-    private Button backToMenuButton;
-
-    @FXML
-    private Text dob;
-
-    @FXML
-    private TextArea familyHistoryArea;
-
-    @FXML
-    private Text height;
-
-    @FXML
-    private Text illiness;
-
-    @FXML
-    private CheckBox immunizationCheckBox;
-
-    @FXML
-    private Text immunizations;
-
-    @FXML
-    private Button logOutButton;
-
-    @FXML
-    private Text medications;
-
-    @FXML
-    private Text name;
-
-    @FXML
-    private TextArea pastCheckInArea;
-
-    @FXML
-    private TextArea surgeryArea;
-
-    @FXML
-    private Text weight;
-
-    @FXML
-    void backToMenu(ActionEvent event) {
-
-    }
 
     @FXML
     void immunizationCheck(ActionEvent event) {
@@ -85,8 +78,14 @@ public class MedHistPatient {
     }
 
     @FXML
-    void logOut(ActionEvent event) {
-
+    void logOut(ActionEvent event) throws IOException {
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource("LoginPage.fxml"));
+        Parent root = loader.load();
+        
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
 }
