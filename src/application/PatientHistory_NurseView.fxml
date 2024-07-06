@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="702.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PatientHistoryController">
+   <children>
+      <Label layoutX="413.0" layoutY="53.0" prefHeight="32.0" prefWidth="190.0" text="Medical History">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="backToMenuButton" layoutX="30.0" layoutY="30.0" mnemonicParsing="false" onAction="#switchToMenu" prefHeight="40.0" prefWidth="161.0" text="Back to Menu" />
+      <Button fx:id="logOutButton" layoutX="876.0" layoutY="23.0" mnemonicParsing="false" onAction="#switchToLogIn" prefHeight="40.0" prefWidth="128.0" text="Log Out" />
+      <Text fx:id="name" layoutX="23.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" wrappingWidth="60.525390625" />
+      <Text fx:id="dob" layoutX="291.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DOB:" wrappingWidth="89.0498046875" />
+      <Text fx:id="height" layoutX="529.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Height:" />
+      <Text fx:id="weight" layoutX="749.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weight:" wrappingWidth="69.3017578125" />
+      <Text fx:id="allegies" layoutX="18.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Allegies:" />
+      <Text fx:id="illiness" layoutX="215.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Illiness:" wrappingWidth="69.3017578125" />
+      <Text fx:id="medications" layoutX="395.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medications:" wrappingWidth="118.0498046875" />
+      <Text fx:id="immunizations" layoutX="598.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Immunizations:" wrappingWidth="265.0498046875" />
+      <CheckBox fx:id="immunizationCheckBox" layoutX="721.0" layoutY="173.0" mnemonicParsing="false" onAction="#immunizationCheck" text="up-to-date" />
+      <Text fx:id="ImunizatinMissing" layoutX="855.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Missing:" wrappingWidth="76.0498046875" />
+      <Label layoutX="124.0" layoutY="246.0" prefHeight="28.0" prefWidth="134.0" text="Past Check-in" />
+      <TextArea fx:id="pastCheckInArea" layoutX="100.0" layoutY="311.0" prefHeight="350.0" prefWidth="200.0" />
+      <Label layoutX="433.0" layoutY="246.0" prefHeight="28.0" prefWidth="126.0" text="Family History" />
+      <TextArea fx:id="familyHistoryArea" layoutX="408.0" layoutY="311.0" prefHeight="341.0" prefWidth="200.0" />
+      <Label layoutX="798.0" layoutY="246.0" text="Surgeries" />
+      <TextArea fx:id="surgeryArea" layoutX="747.0" layoutY="314.0" prefHeight="331.0" prefWidth="200.0" />
+      <TextField fx:id="patientNameField" layoutX="84.0" layoutY="105.0" prefHeight="40.0" prefWidth="190.0" />
+      <TextField fx:id="patientDobField" layoutX="336.0" layoutY="104.0" prefHeight="40.0" prefWidth="180.0" />
+      <TextField fx:id="patientHeightField" layoutX="591.0" layoutY="104.0" prefHeight="40.0" prefWidth="149.0" />
+      <TextField fx:id="patientWeightField" layoutX="818.0" layoutY="104.0" prefHeight="40.0" prefWidth="168.0" />
+      <TextField fx:id="allegiesField" layoutX="87.0" layoutY="167.0" prefHeight="40.0" prefWidth="126.0" />
+      <TextField fx:id="illinessField" layoutX="277.0" layoutY="167.0" prefHeight="40.0" prefWidth="118.0" />
+      <TextField fx:id="medicationField" layoutX="501.0" layoutY="167.0" prefHeight="40.0" prefWidth="89.0" />
+      <TextField fx:id="missingField" layoutX="926.0" layoutY="167.0" prefHeight="40.0" prefWidth="100.0" />
+   </children>
+</AnchorPane>
