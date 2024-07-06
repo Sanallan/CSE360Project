@@ -7,11 +7,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="639.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="639.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PatientInfoController">
    <children>
       <AnchorPane layoutX="-100.0" layoutY="-128.0" prefHeight="200.0" prefWidth="200.0">
          <children>
-            <Button layoutX="138.0" layoutY="170.0" mnemonicParsing="false" text="Back" />
+            <Button fx:id="backToMenuButton" layoutX="138.0" layoutY="170.0" mnemonicParsing="false" onAction="#backToMenu" text="Back" />
          </children>
       </AnchorPane>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="410.0" layoutX="52.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="225.0" />
@@ -36,7 +36,7 @@
       <TextField layoutX="66.0" layoutY="179.0" promptText="Member ID" />
       <TextField layoutX="66.0" layoutY="218.0" promptText="Phone #" />
       <TextField layoutX="66.0" layoutY="259.0" promptText="Fax #" />
-      <Button layoutX="208.0" layoutY="485.0" mnemonicParsing="false" text="Update" />
+      <Button fx:id="updateInsuranceButton" layoutX="208.0" layoutY="485.0" mnemonicParsing="false" onAction="#updateInsuranceContact" text=" Update" />
       <TextField layoutX="346.0" layoutY="179.0" promptText="Phone #" />
       <TextField layoutX="346.0" layoutY="146.0" promptText="Address" />
       <TextField layoutX="346.0" layoutY="218.0" promptText="Email" />
@@ -54,8 +54,8 @@
          </font>
       </Text>
       <Text layoutX="326.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Contact:" />
-      <Button layoutX="502.0" layoutY="485.0" mnemonicParsing="false" text="Update" />
-      <Button layoutX="777.0" layoutY="485.0" mnemonicParsing="false" text="Update" />
-      <Button layoutX="804.0" layoutY="33.0" mnemonicParsing="false" text="Log Out" />
+      <Button fx:id="updateContactButton" layoutX="502.0" layoutY="485.0" mnemonicParsing="false" onAction="#updateContact" text="Update" />
+      <Button fx:id="updatePharmacyButton" layoutX="777.0" layoutY="485.0" mnemonicParsing="false" onAction="#updatePharmacy" text="Update" />
+      <Button fx:id="logOutButton" layoutX="804.0" layoutY="33.0" mnemonicParsing="false" onAction="#logOut" text="Log Out" />
    </children>
 </AnchorPane>
