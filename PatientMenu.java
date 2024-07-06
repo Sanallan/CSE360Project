@@ -13,99 +13,68 @@ import javafx.scene.Node;
 
 public class PatientMenu {
 	
-	
-	//When this method is called, it will changed to the scene to patient search page
 	@FXML
-	public void switchToMedHist(ActionEvent event) throws IOException 
+	void medHist(ActionEvent event) throws IOException 
 	{
-		Parent patientSearchParent = FXMLLoader.load(getClass().getResource("MedicalHistoryPatientSide.fxml"));
-		Scene patientSearchScene = new Scene(patientSearchParent);
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("MedicalHistoryPatientSide.fxml"));
+        Parent root = loader.load();
+        
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+	}
+	
+	@FXML
+	void summary(ActionEvent event) throws IOException 
+	{
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("AppointmentSummaryPatientSide.fxml"));
+        Parent root = loader.load();
+        
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+	}
+	
+	@FXML
+	void messages(ActionEvent event) throws IOException 
+	{
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("patientmessaging.fxml"));
+        Parent root = loader.load();
+        
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 		
-		//This line gets the stage information
-		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-		window.setScene(patientSearchScene);
-		window.show();
 	}
-	
-	//When this method is called, it will changed to the scene to patient contact page
+
 	@FXML
-	public void switchToSummary(ActionEvent event) throws IOException 
+	void contactInfo(ActionEvent event) throws IOException 
 	{
-		Parent appointmentSummaryParent = FXMLLoader.load(getClass().getResource("AppointmentSummaryPatienSide.fxml"));
-		Scene appointmentSummaryScene = new Scene(appointmentSummaryParent);
-				
-		//This line gets the stage information
-		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-		window.setScene(appointmentSummaryScene);
-		window.show();
-	}
-	
-	//When this method is called, it will changed to the scene to patient history page
-	@FXML
-	public void switchToMessage(ActionEvent event) throws IOException 
-	{
-		Parent messageParent = FXMLLoader.load(getClass().getResource("patientmessaging.fxml"));
-		Scene messageScene = new Scene(messageParent);
-					
-		//This line gets the stage information
-		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-		window.setScene(messageScene);
-		window.show();
-	}
-	
-	//When this method is called, it will changed to the scene to patient history page
-	@FXML
-	public void switchToContactInfo(ActionEvent event) throws IOException 
-	{
-		Parent contactInfoParent = FXMLLoader.load(getClass().getResource("patientInfo.fxml"));
-		Scene contactInfoScene = new Scene(contactInfoParent);
-						
-		//This line gets the stage information
-		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-		window.setScene(contactInfoScene);
-		window.show();
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("patientInfo.fxml"));
+        Parent root = loader.load();
+        
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+		
 	}
 
     @FXML
-    private Button inbox;
-
-    @FXML
-    private Button logOutButton;
-
-    @FXML
-    private Button visitsummary;
-
-    @FXML
-    private Button history;
-
-    @FXML
-    private Button contactinfo;
-
-
-    @FXML
-    void logOut(ActionEvent event) {
-
+    void logOut(ActionEvent event) throws IOException {
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource("LoginPage.fxml"));
+        Parent root = loader.load();
+        
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+		
     }
 
-    @FXML
-    void inbox(ActionEvent event) {
-
-    }
-
-    @FXML
-    void visitsummary(ActionEvent event) {
-
-    }
-
-    @FXML
-    void history(ActionEvent event) {
-q
-    }
-
-    @FXML
-    void contactinfo(ActionEvent event) {
-
-    }
 
 
 }
