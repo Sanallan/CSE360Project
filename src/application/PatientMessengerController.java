@@ -13,7 +13,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class PatientMessangerController {
+public class PatientMessengerController {
 	
 	
 	//When this method is called, it will changed to the scene to menu page
@@ -61,7 +61,17 @@ public class PatientMessangerController {
 
     @FXML
     void send(ActionEvent event) {
-
+    	String message = messageArea.getText();
+        if (message != null && !message.trim().isEmpty()) {
+            
+            sendMessageToDoctor(message);
+            messageArea.clear(); 
+        }
+    }
+    
+    private void sendMessageToDoctor(String message) {
+        
+        System.out.println("Message sent to patient: " + message);
     }
 
 }
