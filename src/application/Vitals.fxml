@@ -19,19 +19,19 @@
             </Label>
             <Button fx:id="backToMenuButton" layoutX="56.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToMenu" prefHeight="40.0" prefWidth="167.0" text="Back to Menu" />
             <Label layoutX="24.0" layoutY="111.0" prefHeight="28.0" prefWidth="92.0" text="Date:" />
-            <TextField fx:id="dateField" layoutX="78.0" layoutY="105.0" prefHeight="28.0" prefWidth="122.0" />
+            <TextField fx:id="dateField" layoutX="78.0" layoutY="105.0" prefHeight="28.0" prefWidth="122.0" promptText="00/00/0000" />
             <Label layoutX="222.0" layoutY="111.0" prefHeight="28.0" prefWidth="80.0" text="Weight:" />
-            <TextField fx:id="weightField" layoutX="294.0" layoutY="105.0" prefHeight="40.0" prefWidth="122.0" />
+            <TextField fx:id="weightField" layoutX="294.0" layoutY="105.0" prefHeight="40.0" prefWidth="122.0" promptText="lbs" />
             <Label layoutX="449.0" layoutY="111.0" text="Height:" />
-            <TextField fx:id="heightField" layoutX="525.0" layoutY="105.0" prefHeight="40.0" prefWidth="114.0" />
+            <TextField fx:id="heightField" layoutX="525.0" layoutY="105.0" prefHeight="40.0" prefWidth="114.0" promptText="inches" />
             <Label layoutX="14.0" layoutY="175.0" prefHeight="28.0" prefWidth="114.0" text="Heart Rate:" />
-            <TextField fx:id="heartRateField" layoutX="126.0" layoutY="169.0" prefHeight="40.0" prefWidth="148.0" />
+            <TextField fx:id="heartRateField" layoutX="126.0" layoutY="169.0" prefHeight="40.0" prefWidth="148.0" promptText="bpm" />
             <Label layoutX="302.0" layoutY="175.0" text="Blood Pressure:" />
-            <TextField fx:id="bloodPressureField" layoutX="438.0" layoutY="169.0" prefHeight="40.0" prefWidth="137.0" />
+            <TextField fx:id="bloodPressureField" layoutX="438.0" layoutY="169.0" prefHeight="40.0" prefWidth="137.0" promptText="mmHg" />
             <Label layoutX="670.0" layoutY="111.0" text="Body Temp:" />
-            <TextField fx:id="bodyTempField" layoutX="786.0" layoutY="105.0" prefHeight="40.0" prefWidth="129.0" />
+            <TextField fx:id="bodyTempField" layoutX="786.0" layoutY="105.0" prefHeight="40.0" prefWidth="129.0" promptText=" °F" />
             <Label layoutX="612.0" layoutY="175.0" text="Respiration Rate:" />
-            <TextField fx:id="respirationRateField" layoutX="770.0" layoutY="169.0" prefHeight="40.0" prefWidth="188.0" />
+            <TextField fx:id="respirationRateField" layoutX="770.0" layoutY="169.0" prefHeight="40.0" prefWidth="188.0" promptText="per minute" />
             <RadioButton fx:id="eyeCheckRadioButton" layoutX="181.0" layoutY="240.0" mnemonicParsing="false" onAction="#eyeCheck" prefHeight="28.0" prefWidth="122.0" text="Good" />
             <RadioButton fx:id="earCheckRadioButton" layoutX="393.0" layoutY="240.0" mnemonicParsing="false" onAction="#earCheck" text="Good" />
             <Label layoutX="63.0" layoutY="321.0" prefHeight="28.0" prefWidth="129.0" text="Reson of Visit:" />
@@ -40,6 +40,7 @@
             <TextArea fx:id="medicationPrescribedArea" layoutX="280.0" layoutY="512.0" prefHeight="172.0" prefWidth="571.0" promptText="Type here" />
             <Label layoutX="70.0" layoutY="240.0" text="Eye Check:" />
             <Label layoutX="294.0" layoutY="240.0" prefHeight="28.0" prefWidth="89.0" text="Ear Check:" />
+            <Button fx:id="saveButton" layoutX="896.0" layoutY="606.0" mnemonicParsing="false" onAction="#save" text="Save" />
          </children>
       </AnchorPane>
    </children>

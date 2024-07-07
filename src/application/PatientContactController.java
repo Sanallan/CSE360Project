@@ -26,6 +26,20 @@ public class PatientContactController {
 		window.setScene(NurseMenuScene);
 		window.show();
 	}
+	
+	
+	//When this method is called, it will changed to the scene to the log in page
+	@FXML
+	public void switchToLogIn(ActionEvent event) throws IOException 
+	{
+	Parent logInParent = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
+	Scene logInScene = new Scene(logInParent);
+						
+	//This line gets the stage information
+	Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+	window.setScene(logInScene);
+	window.show();
+	}
 
     @FXML
     private TextArea PharmacyArea;
