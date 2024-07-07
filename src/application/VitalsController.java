@@ -1,7 +1,12 @@
 package application;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -24,6 +29,8 @@ import javafx.stage.Stage;
 
 public class VitalsController {
 	
+	
+	
 	//When this method is called, it will changed to the scene to menu page
 	@FXML
 	public void switchToMenu(ActionEvent event) throws IOException 
@@ -37,114 +44,131 @@ public class VitalsController {
 		window.show();
 	}
 
+
     @FXML
     private Button backToMenuButton;
 
     @FXML
-    private TextField bloodPressureField;
+    private TextField bldPressTxt;
 
     @FXML
-    private TextField bodyTempField;
+    private TextField bodyTempTxt;
 
     @FXML
-    private TextField dateField;
+    private TextField dateTxt;
 
     @FXML
-    private RadioButton earCheckRadioButton;
+    private TextField dobTxt;
 
     @FXML
-    private RadioButton eyeCheckRadioButton;
+    private TextField firstNameTxt;
 
     @FXML
-    private TextField heartRateField;
+    private TextField heartRateTxt;
 
     @FXML
-    private TextField heightField;
+    private TextField heightTxt;
 
     @FXML
-    private TextArea medicationPrescribedArea;
+    private TextField lastNameTxt;
 
     @FXML
-    private TextArea reasonOfVisitArea;
+    private Button logoutBtn;
 
     @FXML
-    private TextField respirationRateField;
-    
+    private TextArea nurseArea;
+
+    @FXML
+    private Button patHistoryBtn;
+
     @FXML
     private Button saveButton;
 
     @FXML
-    private TextField weightField;
-
-    @FXML
-    void backToMenu(ActionEvent event) {
-
-    }
-
-    @FXML
-    void earCheck(ActionEvent event) {
-
-    }
-
-    @FXML
-    void eyeCheck(ActionEvent event) {
-
-    }
+    private TextField weightTxt;
     
     @FXML
-    void save(ActionEvent event) {
-     
-    	if (validationInput(dateField, weightField, heightField, heartRateField, bloodPressureField, bodyTempField, respirationRateField, reasonOfVisitArea, medicationPrescribedArea)) {
-		        try (
-		        	FileWriter writer = new FileWriter("PatientName.txt")) {
-		            writer.write("Date: " + dateField.getText() + "\n" +
-		                         "Weight: " + weightField.getText() + "\n" +
-		                         "Height: " + heightField.getText() + "\n" +
-		                         "Heart Rate: " + heartRateField.getText() + "\n" +
-		                         "Blood Pressure: " + bloodPressureField.getText() + "\n" +
-		                         "Body Temp: " + bodyTempField.getText() + "\n" +
-		                         "Respiration Rate: " +  respirationRateField.getText() + "\n" +
-		                         "Reason of Visit" + reasonOfVisitArea.getText() + "\n" +
-		                         "Medication Prescribed" + medicationPrescribedArea.getText() + "\n");
-		        } catch (IOException e1) {
-		            e1.printStackTrace();
-		        }
-		    }
-		}
+    void save(ActionEvent event) throws IOException{
+    	String fileName = PatientClass.getFileName();
+    	String firstName = firstNameTxt.getText();
+        String lastName = lastNameTxt.getText();
+        String dob = dobTxt.getText();
+        String date = dateTxt.getText();
+        String weight = weightTxt.getText();
+        String height = heightTxt.getText();
+        String bodyTemp = bodyTempTxt.getText();
+        String heartRate = heartRateTxt.getText();
+        String bldPress = bldPressTxt.getText();
+        
+        //write patient information to the file
+        try (FileWriter writer = new FileWriter(fileName)) {
+            writer.write("First Name: " + firstName + "\n");
+            writer.write("Last Name: " + lastName + "\n");
+            writer.write("DOB: " + dob + "\n");
+            writer.write("Date: " + date + "\n");
+            writer.write("Weight: " + weight + "\n");
+            writer.write("Height: " + height + "\n");
+            writer.write("Body Temp: " + bodyTemp + "\n");
+            writer.write("Heart Rate: " + heartRate + "\n");
+            writer.write("Blood Pressure: " + bldPress + "\n");
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
+        }
+	}
+    
+    @FXML
+    public void initialize() {
+        try {
+            loadPatientData();
+        } catch (IOException e) {
+        	showAlert(AlertType.ERROR, "Error", "Failed To Load Patient Data");
+        }
+    }
 
- 
-	
-	//This method checks inputs for correctness
-	private static boolean validationInput(TextField date, TextField weight, TextField height, TextField heartRate, TextField bloodPressure, TextField bodyTemp, 
-			                               TextField respirationRate, TextArea resonOfVisit, TextArea medicationPrescribed) {
-	String datePattern = "\\d{2}/\\d{2}/\\d{4}";
-	String vitalsPattern = "\\d+(\\.\\d+)?";
-		
-	boolean isValid = true;
-	
-	if(!date.getText().matches(datePattern) || !weight.getText().matches(vitalsPattern) || !height.getText().matches(vitalsPattern) || 
-	    !heartRate.getText().matches(vitalsPattern) || !bloodPressure.getText().matches(vitalsPattern) || !bodyTemp.getText().matches(vitalsPattern) ||
-	    !respirationRate.getText().matches(vitalsPattern)) {
-		showAlert("Invalid Input or Inputs");
-		isValid = false;
-	} else {
-		date.setStyle(null);
-		weight.setStyle(null);
-		height.setStyle(null);
-		heartRate.setStyle(null);
-		bloodPressure.setStyle(null);
-		bodyTemp.setStyle(null);
-		respirationRate.setStyle(null);
-	}
-	return isValid;
-	}
-	
-	//This method prints a warning if the inputs are entered incorrectly 
-	private static void showAlert(String message) {
-		Alert alert = new Alert(AlertType.WARNING);
-		alert.setContentText(message);
-		alert.showAndWait();
+    private void loadPatientData() throws IOException {
+        // Get the file name from the shared data class
+        String fileName = PatientClass.getFileName();
+        Path filePath = Paths.get(fileName);
 
-	}
+        // Check if the file exists
+        if (Files.exists(filePath)) {
+            try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+                String line;
+                while ((line = reader.readLine()) != null) {
+                	if (line.startsWith("First Name:")) {
+                        firstNameTxt.setText(line.split(": ")[1]);
+                    } else if (line.startsWith("Last Name:")) {
+                        lastNameTxt.setText(line.split(": ")[1]);
+                    } else if (line.startsWith("DOB:")) {
+                        dobTxt.setText(line.split(": ")[1]);
+                    } else if (line.startsWith("Date:")) {
+                        weightTxt.setText(line.split(": ")[1]);
+                    } else if (line.startsWith("Weight:")) {
+                        heightTxt.setText(line.split(": ")[1]);
+                    } else if (line.startsWith("Height:")) {
+                        bodyTempTxt.setText(line.split(": ")[1]);
+                    } else if (line.startsWith("Body Temp:")) {
+                        heartRateTxt.setText(line.split(": ")[1]);
+                    } else if (line.startsWith("Heart Rate:")) {
+                        bodyTempTxt.setText(line.split(": ")[1]);
+                    }  else if (line.startsWith("Blood Pressure:")) {
+                        bldPressTxt.setText(line.split(": ")[1]);
+                    }
+                }
+            }
+        } else {
+        	showAlert(AlertType.ERROR, "Error", "Patient File Not Found.");
+        }
+    }
+    
+    private void showAlert(AlertType alertType, String title, String message) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+	
+
 }
 
