@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 public class MessagePatientController {
 	
 	
-	//When this method is called, it will changed to the scene to menu page
+	//When this method is called, it will changed to the scene to the menu page
 	@FXML
 	public void switchToMenu(ActionEvent event) throws IOException 
 	{
@@ -26,6 +26,19 @@ public class MessagePatientController {
 		//This line gets the stage information
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		window.setScene(NurseMenuScene);
+		window.show();
+	}
+	
+	//When this method is called, it will changed to the scene to the log in page
+	@FXML
+	public void switchToLogIn(ActionEvent event) throws IOException 
+	{
+		Parent logInParent = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
+		Scene logInScene = new Scene(logInParent);
+				
+		//This line gets the stage information
+		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+		window.setScene(logInScene);
 		window.show();
 	}
 
@@ -53,10 +66,25 @@ public class MessagePatientController {
     void logOut(ActionEvent event) {
 
     }
-
+    
     @FXML
     void send(ActionEvent event) {
+    	
+    	String message = messageArea.getText();
+        if (message != null && !message.trim().isEmpty()) {
+            
+            sendMessageToPatient(message);
+            messageArea.clear(); 
+        }
 
     }
+    
+    
+    private void sendMessageToPatient(String message) {
+      
+        System.out.println("Message sent to patient: " + message);
+    }
+
+
 
 }

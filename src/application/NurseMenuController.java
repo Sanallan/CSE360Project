@@ -18,7 +18,7 @@ public class NurseMenuController {
 	@FXML
 	public void switchToPatientSearch(ActionEvent event) throws IOException 
 	{
-		Parent patientSearchParent = FXMLLoader.load(getClass().getResource("PatientSearch.fxml"));
+		Parent patientSearchParent = FXMLLoader.load(getClass().getResource("PatientSearch_NurseView.fxml"));
 		Scene patientSearchScene = new Scene(patientSearchParent);
 		
 		//This line gets the stage information
@@ -31,7 +31,7 @@ public class NurseMenuController {
 	@FXML
 	public void switchToMessagePatient(ActionEvent event) throws IOException 
 	{
-		Parent messagePatientParent = FXMLLoader.load(getClass().getResource("MessagePatient.fxml"));
+		Parent messagePatientParent = FXMLLoader.load(getClass().getResource("MessagePatient_NurseView.fxml"));
 		Scene messagePatientScene = new Scene(messagePatientParent);
 			
 		//This line gets the stage information
@@ -44,7 +44,7 @@ public class NurseMenuController {
 	@FXML
 	public void switchToPatientContact(ActionEvent event) throws IOException 
 	{
-		Parent patientContactParent = FXMLLoader.load(getClass().getResource("PatientContact.fxml"));
+		Parent patientContactParent = FXMLLoader.load(getClass().getResource("PatientContact_NurseView.fxml"));
 		Scene patientContactScene = new Scene(patientContactParent);
 				
 		//This line gets the stage information
@@ -57,7 +57,7 @@ public class NurseMenuController {
 	@FXML
 	public void switchToPatientHistory(ActionEvent event) throws IOException 
 	{
-		Parent patientHistoryParent = FXMLLoader.load(getClass().getResource("PatientHistory.fxml"));
+		Parent patientHistoryParent = FXMLLoader.load(getClass().getResource("PatientHistory_NurseView.fxml"));
 		Scene patientHistoryScene = new Scene(patientHistoryParent);
 					
 		//This line gets the stage information
@@ -78,6 +78,19 @@ public class NurseMenuController {
 		window.setScene(vitalsScene);
 		window.show();
 	}
+	
+	//When this method is called, it will changed to the scene to the log in page
+		@FXML
+		public void switchToLogIn(ActionEvent event) throws IOException 
+		{
+			Parent logInParent = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
+			Scene logInScene = new Scene(logInParent);
+					
+			//This line gets the stage information
+			Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+			window.setScene(logInScene);
+			window.show();
+		}
 
     @FXML
     private Button backToSearchButton;
