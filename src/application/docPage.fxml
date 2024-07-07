@@ -6,21 +6,19 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="683.0" prefWidth="900.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+<AnchorPane prefHeight="683.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Docpagecontroller">
    <children>
       <AnchorPane layoutX="-179.0" layoutY="-178.0" prefHeight="200.0" prefWidth="200.0" />
-      <Button layoutX="749.0" layoutY="77.0" mnemonicParsing="false" text="Logout" />
-      <Text layoutX="270.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Doctor Mains Screen" wrappingWidth="360.93359375">
+      <Button fx:id="logoutBtn" layoutX="749.0" layoutY="77.0" mnemonicParsing="false" onAction="#logoutBtn" text="Logout" />
+      <Text layoutX="277.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Doctor" textAlignment="CENTER" wrappingWidth="360.93359375">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <Text layoutX="399.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Doctor:" />
-      <Text layoutX="380.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Search" />
-      <TextField layoutX="160.0" layoutY="329.0" promptText="first Name" />
-      <TextField layoutX="355.0" layoutY="329.0" promptText="Last Name" />
-      <TextField layoutX="540.0" layoutY="329.0" promptText="MM-DD-YYYY" />
-      <Button layoutX="403.0" layoutY="405.0" mnemonicParsing="false" text="Submit" />
+      <Text layoutX="419.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Search" />
+      <TextField fx:id="firstNameTxt" layoutX="163.0" layoutY="304.0" promptText="first Name" />
+      <TextField fx:id="lastNameTxt" layoutX="382.0" layoutY="304.0" promptText="Last Name" />
+      <TextField fx:id="dobTxt" layoutX="600.0" layoutY="304.0" promptText="MM-DD-YYYY" />
+      <Button fx:id="btnLogin" layoutX="430.0" layoutY="369.0" mnemonicParsing="false" onAction="#btnLogin" text="Submit" />
    </children>
 </AnchorPane>

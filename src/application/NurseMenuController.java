@@ -42,45 +42,6 @@ public class NurseMenuController {
 		window.show();
 	}
 	
-	//When this method is called, it will changed to the scene to message patient page
-	@FXML
-	public void switchToMessagePatient(ActionEvent event) throws IOException 
-	{
-		Parent messagePatientParent = FXMLLoader.load(getClass().getResource("MessagePatient_NurseView.fxml"));
-		Scene messagePatientScene = new Scene(messagePatientParent);
-			
-		//This line gets the stage information
-		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-		window.setScene(messagePatientScene);
-		window.show();
-	}
-	
-	//When this method is called, it will changed to the scene to patient contact page
-	@FXML
-	public void switchToPatientContact(ActionEvent event) throws IOException 
-	{
-		Parent patientContactParent = FXMLLoader.load(getClass().getResource("PatientContact_NurseView.fxml"));
-		Scene patientContactScene = new Scene(patientContactParent);
-				
-		//This line gets the stage information
-		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-		window.setScene(patientContactScene);
-		window.show();
-	}
-	
-	//When this method is called, it will changed to the scene to patient history page
-	@FXML
-	public void switchToPatientHistory(ActionEvent event) throws IOException 
-	{
-		Parent patientHistoryParent = FXMLLoader.load(getClass().getResource("PatientHistory_NurseView.fxml"));
-		Scene patientHistoryScene = new Scene(patientHistoryParent);
-					
-		//This line gets the stage information
-		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-		window.setScene(patientHistoryScene);
-		window.show();
-	}
-	
 	//When this method is called, it will changed to the scene to patient history page
 	@FXML
 	public void switchToVitals(ActionEvent event) throws IOException 
