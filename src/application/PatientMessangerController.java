@@ -17,17 +17,7 @@ public class PatientMessangerController {
 	
 	
 	//When this method is called, it will changed to the scene to menu page
-	@FXML
-	public void switchToMenu(ActionEvent event) throws IOException 
-	{
-		Parent PatientMenuParent = FXMLLoader.load(getClass().getResource("PatientMenu.fxml"));
-		Scene PatientMenuScene = new Scene(PatientMenuParent);
-			
-		//This line gets the stage information
-		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-		window.setScene(PatientMenuScene);
-		window.show();
-	}
+
 
 	@FXML
     private TextField docNameField;
@@ -48,13 +38,25 @@ public class PatientMessangerController {
     private Button logOutButton;
 
     @FXML
-    void backToMenu(ActionEvent event) {
-
+    void backToMenu(ActionEvent event) throws IOException {
+    	Parent PatientMenuParent = FXMLLoader.load(getClass().getResource("PatientMenu.fxml"));
+		Scene PatientMenuScene = new Scene(PatientMenuParent);
+			
+		//This line gets the stage information
+		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+		window.setScene(PatientMenuScene);
+		window.show();
     }
 
     @FXML
-    void logOut(ActionEvent event) {
-
+    void logOut(ActionEvent event) throws IOException {
+		Parent logOutParent = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
+		Scene logOutScene = new Scene(logOutParent);
+				
+		//This line gets the stage information
+		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+		window.setScene(logOutScene);
+		window.show();
     }
 
     @FXML

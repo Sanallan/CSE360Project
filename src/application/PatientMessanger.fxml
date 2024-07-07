@@ -8,7 +8,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <SplitPane dividerPositions="0.1426383011481341" layoutX="37.0" layoutY="90.0" orientation="VERTICAL" prefHeight="275.0" prefWidth="215.0">
@@ -25,16 +24,16 @@
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
         </items>
       </SplitPane>
-      <TextField layoutX="316.0" layoutY="90.0" prefHeight="28.0" prefWidth="197.0" promptText="Doctor Name" />
-      <TextField layoutX="316.0" layoutY="127.0" prefHeight="28.0" prefWidth="200.0" promptText="Subject Line" />
-      <TextArea layoutX="316.0" layoutY="164.0" prefHeight="200.0" prefWidth="200.0" promptText="Message" />
+      <TextField id="docNameField" fx:id="docNameField" layoutX="316.0" layoutY="90.0" prefHeight="28.0" prefWidth="197.0" promptText="Doctor Name" />
+      <TextField id="subjectField" fx:id="subjectField" layoutX="316.0" layoutY="127.0" prefHeight="28.0" prefWidth="200.0" promptText="Subject Line" />
+      <TextArea id="messageArea" fx:id="messageArea" layoutX="316.0" layoutY="164.0" prefHeight="200.0" prefWidth="200.0" promptText="Message" />
       <Text layoutX="239.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Messaging" wrappingWidth="121.60357856750488">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <Button layoutX="526.0" layoutY="351.0" mnemonicParsing="false" text="Send" />
-      <Button layoutX="23.0" layoutY="23.0" mnemonicParsing="false" text="Menu" />
-      <Button layoutX="526.0" layoutY="23.0" mnemonicParsing="false" text="Log Out" />
+      <Button fx:id="sendButton" layoutX="526.0" layoutY="351.0" mnemonicParsing="false" onAction="#send" text="Send" />
+      <Button fx:id="backToMenuButton" layoutX="23.0" layoutY="23.0" mnemonicParsing="false" onAction="#backToMenu" text="Back" />
+      <Button fx:id="logOutButton" layoutX="526.0" layoutY="23.0" mnemonicParsing="false" onAction="#logOut" text="Log Out" />
    </children>
 </AnchorPane>
