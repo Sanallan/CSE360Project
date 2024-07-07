@@ -32,10 +32,10 @@
             <Font size="27.0" />
          </font>
       </Text>
-      <TextField id="insuranceName" fx:id="InsuranceName" layoutX="66.0" layoutY="133.0" promptText="Name" />
-      <TextField id="insuranceID" fx:id="InsuranceID" layoutX="66.0" layoutY="179.0" promptText="Member ID" />
-      <TextField id="insurPhoneNum" fx:id="InsurPhoneNum" layoutX="66.0" layoutY="218.0" promptText="Phone #" />
-      <TextField id="insurFaxNum" fx:id="InsurFaxNum" layoutX="66.0" layoutY="259.0" promptText="Fax #" />
+      <TextField id="insuranceName" fx:id="insuranceName" layoutX="66.0" layoutY="133.0" promptText="Name" />
+      <TextField id="insuranceID" fx:id="insuranceID" layoutX="66.0" layoutY="179.0" promptText="Member ID" />
+      <TextField id="insurPhoneNum" fx:id="insurPhoneNum" layoutX="66.0" layoutY="218.0" promptText="Phone #" />
+      <TextField id="insurFaxNum" fx:id="insurFaxNum" layoutX="66.0" layoutY="259.0" promptText="Fax #" />
       <Button id="updateInsuranceButton" fx:id="updateInsuranceButton" layoutX="208.0" layoutY="485.0" mnemonicParsing="false" onAction="#updateInsuranceContact" text=" Update" />
       <TextField id="patientPhone" fx:id="patientPhone" layoutX="346.0" layoutY="179.0" promptText="Phone #" />
       <TextField id="patientAddress" fx:id="patientAddress" layoutX="346.0" layoutY="146.0" promptText="Address" />

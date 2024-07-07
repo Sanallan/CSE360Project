@@ -61,7 +61,17 @@ public class PatientMessangerController {
 
     @FXML
     void send(ActionEvent event) {
-
+    	String message = messageArea.getText();
+        if (message != null && !message.trim().isEmpty()) {
+            
+            sendMessageToDoctor(message);
+            messageArea.clear(); 
+        }
+    }
+    
+    private void sendMessageToDoctor(String message) {
+        
+        System.out.println("Message sent to patient: " + message);
     }
 
 }
