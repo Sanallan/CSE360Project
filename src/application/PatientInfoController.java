@@ -14,43 +14,57 @@ import javafx.stage.Stage;
 
 public class PatientInfoController {
 	
-	//When this method is called, it will changed to the scene to menu page
-	//@FXML
-	/*
-	 * public void switchToMenu(ActionEvent event) throws IOException { Parent
-	 * PatientMenuParent =
-	 * FXMLLoader.load(getClass().getResource("PatientMenu.fxml")); Scene
-	 * PatientMenuScene = new Scene(PatientMenuParent);
-	 * 
-	 * //This line gets the stage information Stage window = (Stage) ((Node)
-	 * event.getSource()).getScene().getWindow(); window.setScene(PatientMenuScene);
-	 * window.show(); }
-	 */
-
-	/*
-	 * @FXML public void switchLogOut(ActionEvent event) throws IOException { Parent
-	 * logOutParent = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
-	 * Scene logOutScene = new Scene(logOutParent);
-	 * 
-	 * //This line gets the stage information Stage window = (Stage) ((Node)
-	 * event.getSource()).getScene().getWindow(); window.setScene(logOutScene);
-	 * window.show(); }
-	 */
-
+	
     @FXML
-    private TextArea insuranceArea;
+    private TextArea insuranceName;
+    
+    @FXML
+    private TextArea insuranceID;
+    
+    @FXML
+    private TextArea insurPhone;
+    
+    @FXML
+    private TextArea insurFaxNum;
 
     @FXML
     private Button updateInsuranceButton;
 
     @FXML
-    private TextArea patientInfoArea;
+    private TextArea patientName;
+    
+    @FXML
+    private TextArea patientPhone;
+    
+    @FXML
+    private TextArea patientAddress;
+    
+    @FXML
+    private TextArea patientEmail;
+    
+    @FXML
+    private TextArea emerName;
+    
+    @FXML
+    private TextArea emerAddress;
+    
+    @FXML
+    private TextArea emerPhoneNum;
     
     @FXML
     private Button updateContactButton;
     
     @FXML
-    private TextArea pharmacyArea;
+    private TextArea pharmName;
+    
+    @FXML
+    private TextArea pharmAddress;
+    
+    @FXML
+    private TextArea pharmHours;
+    
+    @FXML
+    private TextArea pharmPhoneNum;
 
     @FXML
     private Button updatePharmacyButton;

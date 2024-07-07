@@ -11,7 +11,7 @@
    <children>
       <AnchorPane layoutX="-100.0" layoutY="-128.0" prefHeight="200.0" prefWidth="200.0">
          <children>
-            <Button fx:id="backToMenuButton" layoutX="138.0" layoutY="170.0" mnemonicParsing="false" onAction="#backToMenu" text="Back" />
+            <Button id="backToMenuButton" fx:id="backToMenuButton" layoutX="138.0" layoutY="170.0" mnemonicParsing="false" onAction="#backToMenu" text="Back" />
          </children>
       </AnchorPane>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="410.0" layoutX="52.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="225.0" />
@@ -32,30 +32,30 @@
             <Font size="27.0" />
          </font>
       </Text>
-      <TextField layoutX="66.0" layoutY="133.0" promptText="Name" />
-      <TextField layoutX="66.0" layoutY="179.0" promptText="Member ID" />
-      <TextField layoutX="66.0" layoutY="218.0" promptText="Phone #" />
-      <TextField layoutX="66.0" layoutY="259.0" promptText="Fax #" />
-      <Button fx:id="updateInsuranceButton" layoutX="208.0" layoutY="485.0" mnemonicParsing="false" onAction="#updateInsuranceContact" text=" Update" />
-      <TextField layoutX="346.0" layoutY="179.0" promptText="Phone #" />
-      <TextField layoutX="346.0" layoutY="146.0" promptText="Address" />
-      <TextField layoutX="346.0" layoutY="218.0" promptText="Email" />
-      <TextField layoutX="346.0" layoutY="349.0" promptText="Name" />
-      <TextField layoutX="346.0" layoutY="388.0" promptText="Address" />
-      <TextField layoutX="346.0" layoutY="427.0" promptText="Phone #" />
+      <TextField id="insuranceName" fx:id="InsuranceName" layoutX="66.0" layoutY="133.0" promptText="Name" />
+      <TextField id="insuranceID" fx:id="InsuranceID" layoutX="66.0" layoutY="179.0" promptText="Member ID" />
+      <TextField id="insurPhoneNum" fx:id="InsurPhoneNum" layoutX="66.0" layoutY="218.0" promptText="Phone #" />
+      <TextField id="insurFaxNum" fx:id="InsurFaxNum" layoutX="66.0" layoutY="259.0" promptText="Fax #" />
+      <Button id="updateInsuranceButton" fx:id="updateInsuranceButton" layoutX="208.0" layoutY="485.0" mnemonicParsing="false" onAction="#updateInsuranceContact" text=" Update" />
+      <TextField id="patientPhone" fx:id="patientPhone" layoutX="346.0" layoutY="179.0" promptText="Phone #" />
+      <TextField id="patientAddress" fx:id="patientAddress" layoutX="346.0" layoutY="146.0" promptText="Address" />
+      <TextField id="patientEmail" fx:id="patientEmail" layoutX="346.0" layoutY="218.0" promptText="Email" />
+      <TextField id="emerName" fx:id="emerName" layoutX="346.0" layoutY="349.0" promptText="Name" />
+      <TextField id="emerAddress" fx:id="emerAddress" layoutX="346.0" layoutY="388.0" promptText="Address" />
+      <TextField id="emerPhoneNum" fx:id="emerPhoneNum" layoutX="346.0" layoutY="427.0" promptText="Phone #" />
       <Text layoutX="326.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Emergencey Contact:" />
-      <TextField layoutX="618.0" layoutY="133.0" promptText="Name" />
-      <TextField layoutX="621.0" layoutY="179.0" promptText="Address" />
-      <TextField layoutX="621.0" layoutY="218.0" promptText="Hours" />
-      <TextField layoutX="621.0" layoutY="259.0" promptText="Phone #" />
+      <TextField id="pharmName" fx:id="pharmName" layoutX="618.0" layoutY="133.0" promptText="Name" />
+      <TextField id="pharmAddress" fx:id="pharmAddress" layoutX="621.0" layoutY="179.0" promptText="Address" />
+      <TextField id="pharmHours" fx:id="pharmHours" layoutX="621.0" layoutY="218.0" promptText="Hours" />
+      <TextField id="pharmPhoneNum" fx:id="pharmPhoneNum" layoutX="621.0" layoutY="259.0" promptText="Phone #" />
       <Text layoutX="284.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Information">
          <font>
             <Font size="38.0" />
          </font>
       </Text>
       <Text layoutX="326.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Contact:" />
-      <Button fx:id="updateContactButton" layoutX="502.0" layoutY="485.0" mnemonicParsing="false" onAction="#updateContact" text="Update" />
-      <Button fx:id="updatePharmacyButton" layoutX="777.0" layoutY="485.0" mnemonicParsing="false" onAction="#updatePharmacy" text="Update" />
-      <Button fx:id="logOutButton" layoutX="804.0" layoutY="33.0" mnemonicParsing="false" onAction="#logOut" text="Log Out" />
+      <Button id="updateContactButton" fx:id="updateContactButton" layoutX="502.0" layoutY="485.0" mnemonicParsing="false" onAction="#updateContact" text="Update" />
+      <Button id="updatePharmacyButton" fx:id="updatePharmacyButton" layoutX="777.0" layoutY="485.0" mnemonicParsing="false" onAction="#updatePharmacy" text="Update" />
+      <Button id="logOutButton" fx:id="logOutButton" layoutX="804.0" layoutY="33.0" mnemonicParsing="false" onAction="#logOut" text="Log Out" />
    </children>
 </AnchorPane>
