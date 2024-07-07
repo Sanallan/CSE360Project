@@ -44,7 +44,8 @@ public class LoginPageController {
             stage.setScene(scene);
             stage.show();
         } else if(txtUser.getText().equals("patient") && txtPass.getText().equals("pat3")){
-        	FXMLLoader loader = new FXMLLoader(getClass().getResource("MenuSelectPatient.fxml"));
+        	PatientClass.fileName = ("RyanFlynn12-07-1999.txt");
+        	FXMLLoader loader = new FXMLLoader(getClass().getResource("PatientMenu.fxml"));
             Parent root = loader.load();
             
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

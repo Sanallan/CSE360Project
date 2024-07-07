@@ -40,7 +40,7 @@ public class PatientMenu {
 	@FXML
 	void messages(ActionEvent event) throws IOException 
 	{
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("patientmessaging.fxml"));
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("PatientMessenger.fxml"));
         Parent root = loader.load();
         
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
