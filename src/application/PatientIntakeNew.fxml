@@ -8,16 +8,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="698.0" prefWidth="852.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.VitalsController">
+<AnchorPane prefHeight="698.0" prefWidth="852.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.patientIntakeController">
    <children>
       <AnchorPane prefHeight="698.0" prefWidth="1014.0">
          <children>
-            <Label layoutX="460.0" layoutY="29.0" prefHeight="28.0" prefWidth="148.0" text="Patient Intake">
+            <Label layoutX="433.0" layoutY="29.0" prefHeight="28.0" prefWidth="148.0" text="Patient Intake">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Button fx:id="backToMenuButton" layoutX="56.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToMenu" prefHeight="40.0" prefWidth="167.0" text="Back To Search" />
+            <Button fx:id="backToSearchbtn" layoutX="56.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToSearch" prefHeight="40.0" prefWidth="167.0" text="Back To Search" />
             <Label layoutX="109.0" layoutY="190.0" prefHeight="28.0" prefWidth="31.0" text="Date:" />
             <TextField fx:id="dateTxt" layoutX="146.0" layoutY="190.0" prefHeight="28.0" prefWidth="122.0" promptText="00/00/0000" />
             <Label layoutX="316.0" layoutY="190.0" prefHeight="28.0" prefWidth="41.0" text="Weight:" />
@@ -31,18 +31,17 @@
             <Label layoutX="740.0" layoutY="195.0" text="Body Temp:" />
             <TextField fx:id="bodyTempTxt" layoutX="831.0" layoutY="190.0" prefHeight="28.0" prefWidth="114.0" promptText=" °F" />
             <Label layoutX="130.0" layoutY="386.0" prefHeight="28.0" prefWidth="82.0" text="Nurse's Notes" />
-            <TextArea fx:id="nurseArea" layoutX="229.0" layoutY="335.0" prefHeight="129.0" prefWidth="555.0" promptText="Type here" />
+            <TextArea fx:id="nurseNotesArea" layoutX="229.0" layoutY="335.0" prefHeight="129.0" prefWidth="555.0" promptText="Type here" />
             <Label layoutX="691.0" layoutY="254.0" text="Is Over 12?" />
-            <Button fx:id="saveButton" layoutX="846.0" layoutY="371.0" mnemonicParsing="false" onAction="#save" prefHeight="57.0" prefWidth="101.0" text="Save" />
-            <CheckBox layoutX="765.0" layoutY="254.0" mnemonicParsing="false" text="Yes" />
-            <Button fx:id="logoutBtn" layoutX="813.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToMenu" prefHeight="40.0" prefWidth="167.0" text="Logout" />
+            <Button fx:id="saveBtn" layoutX="846.0" layoutY="371.0" mnemonicParsing="false" onAction="#save" prefHeight="57.0" prefWidth="101.0" text="Save" />
+            <CheckBox fx:id="over12Check" layoutX="765.0" layoutY="254.0" mnemonicParsing="false" text="Yes" />
+            <Button fx:id="logoutBtn" layoutX="813.0" layoutY="27.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="167.0" text="Logout" />
             <TextField fx:id="firstNameTxt" layoutX="276.0" layoutY="103.0" prefHeight="28.0" prefWidth="122.0" promptText="First Name" />
             <TextField fx:id="lastNameTxt" layoutX="480.0" layoutY="103.0" prefHeight="28.0" prefWidth="122.0" promptText="Last Name" />
             <TextField fx:id="dobTxt" layoutX="679.0" layoutY="103.0" prefHeight="28.0" prefWidth="122.0" promptText="00-00-0000" />
             <Label layoutX="211.0" layoutY="103.0" prefHeight="28.0" prefWidth="63.0" text="First Name:" />
             <Label layoutX="411.0" layoutY="103.0" prefHeight="28.0" prefWidth="59.0" text="Last Name:" />
             <Label layoutX="638.0" layoutY="103.0" prefHeight="28.0" prefWidth="38.0" text="DOB:" />
-            <Button fx:id="patHistoryBtn" layoutX="456.0" layoutY="553.0" mnemonicParsing="false" onAction="#save" prefHeight="57.0" prefWidth="101.0" text="Patient History" />
          </children>
       </AnchorPane>
    </children>

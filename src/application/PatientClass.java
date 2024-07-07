@@ -1,18 +1,12 @@
-public class Patient {
-    private String firstName;
-    private String lastName;
-    private LocalDate birthday;
-    private String contactInfo;
-    private String insuranceInfo;
-    private String pharmacyInfo;
-    // Add getters and setters as needed
+package application;
+public class PatientClass {
+    static String fileName;
 
-    public Patient(String firstName, String lastName, LocalDate birthday, String contactInfo, String insuranceInfo, String pharmacyInfo) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.birthday = birthday;
-        this.contactInfo = contactInfo;
-        this.insuranceInfo = insuranceInfo;
-        this.pharmacyInfo = pharmacyInfo;
+    public static String getFileName() {
+        return fileName;
+    }
+
+    public static void setFileName(String fileName) {
+        PatientClass.fileName = fileName;
     }
 }
